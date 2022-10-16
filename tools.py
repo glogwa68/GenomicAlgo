@@ -93,3 +93,13 @@ def diviser_liste(liste, divided: int):
     for i in range(0, len(liste), divided):
         nouvelle_liste.append(liste[i:i+divided])
     return nouvelle_liste
+
+def diviser_elements(liste, number: int):
+    nouvelle_liste = []
+    for element in range(number):
+        for sous_liste in liste:
+            try:
+                nouvelle_liste.append(sous_liste[element])
+            except: pass
+    return nouvelle_liste
+
